@@ -1,0 +1,50 @@
+<!-- <div class="col-4">
+  <canvas id="myChart"></canvas>
+</div> -->
+
+<div class="col-md-6 my-4">
+
+
+<ng-multiselect-dropdown class="col-md-6"
+*ngIf="dropdownList && dropdownList.length>0"  [placeholder]="'Select Program'"
+  [settings]="dropdownSettings"
+  [data]="dropdownList"
+  [(ngModel)]="selectedItems"
+  (onSelect)="onItemSelect($event)"
+  (onSelectAll)="onSelectAll($event)"
+>
+</ng-multiselect-dropdown>
+</div>
+<!-- drop down 2  -->
+<div class="col-md-6 my-4">
+
+
+<ng-multiselect-dropdown 
+*ngIf="dropdownList && dropdownList.length>0"  [placeholder]="'Select project'"
+  [settings]="dropdownSettings2"
+  [data]="dropdownList2"
+  [(ngModel)]="selectedItems2"
+  (onSelect)="onItemSelect2($event)"
+  (onSelectAll)="onSelectAll2($event)"
+>
+</ng-multiselect-dropdown></div>
+
+<button class="btn btn-primary mx-3" (click)="makeChart()">click me</button>
+
+
+
+<!-- <form [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm.value)">
+
+  <input type="text" name="name" placeholder="name" formControlName="name"><br><br>
+  <input type="text" name="sirName" placeholder="sirName" formControlName="sirName">
+  
+
+
+  <select class="form-select my-3" aria-label="Default select example" formControlName="mySelectedValue">
+    <option selected>Open this select menu</option>
+    <option value="1">One</option>
+    <option *ngFor="let i of myShowArray" value="{{i}}">{{i}}</option>
+   
+  </select>
+  <button type="submit">submit</button> 
+</form> -->
